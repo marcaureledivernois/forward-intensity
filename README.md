@@ -8,4 +8,4 @@ This paper proposes a machine learning approach to estimate physical forward def
 
 **SSRN:**
 
-(https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3657019)
+https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3657019
