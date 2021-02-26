@@ -56,15 +56,6 @@ def save_model(epoch,name):
     # print('updated to ', self.last_saved_epoch)
     # print('Model saved to {}'.format(save_path))
 
-#marche pas trop mal : test_model epoch 99 , test_model_2 epoch 99
-# test_model epoch 99 : fake data, feed 1 by 1
-# test_model_2 epoch 1-99 : fake data, feed 1 by 1
-# test_model_batches : fake data, batches feeding
-# "test_model_fullbatches" : fake data, feed full data --> the more u feed data the less learning rate has to be
-# model_1_realdata999 : 93% AUC on f
-# model_1_realdata_h99 : 70% AUC on h
-# model_traintest_realdata_h9 : 63% on h outofsample
-#
 
 ######################################### DATA #########################################################################
 
@@ -206,16 +197,6 @@ plt.legend(loc="lower right")
 plt.show()
 
 
-
-
-
-#todo : batches instead of 1 by  1 ....... done
-#todo : compute confusion matrix ........ done
-#todo : inferences, how does f change if change a little bit 1 variable of x... average everything -> done, very good results
-#todo : out of sample .... in progress
-#todo : calibration, compute true proba (combining f and g), improve learning process
-#todo : test duan
-
 ################################# test duan ############################################################################
 
 #insample
@@ -304,8 +285,6 @@ plt.ylabel('True Positive Rate')
 plt.title('Receiver operating characteristic')
 plt.legend(loc="lower right")
 plt.show()
-
-
 
 
 ################################# test insample duan ###################################################################
