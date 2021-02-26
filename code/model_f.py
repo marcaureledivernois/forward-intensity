@@ -94,13 +94,6 @@ def save_model(epoch,name):
     # print('updated to ', self.last_saved_epoch)
     # print('Model saved to {}'.format(save_path))
 
-#marche pas trop mal : test_model epoch 99 , test_model_2 epoch 99
-# test_model epoch 99 : fake data, feed 1 by 1
-# test_model_2 epoch 1-99 : fake data, feed 1 by 1
-# test_model_batches : fake data, batches feeding
-# "test_model_fullbatches" : fake data, feed full data --> the more u feed data the less learning rate has to be
-
-
 ############################################### session ################################################################
 
 sess = tf.Session()
@@ -240,10 +233,6 @@ plt.ylabel('True Positive Rate')
 plt.title('Receiver operating characteristic example')
 plt.legend(loc="lower right")
 plt.show()
-
-
-
-
 
 #todo : batches instead of 1 by  1 ---->>>> need decrease learning rate otherwise loss doesnt decrease4
 #todo : compute confusion matrix
