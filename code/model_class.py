@@ -78,7 +78,7 @@ def LorenzCurve(model,x_test,y_test,tau,label,color,path, save = True):
     '''require model, x_test and y_test'''
     loss_value, f_value = model.pred(x_test, y_test)  # outsample
     df = pd.DataFrame(data={'f': f_value.reshape(f_value.shape[0]), 'y': y_test})
-    df['prob'] = 1-np.exp(-df['f']/12)   # maybe play with the delta constant to cheat on AUC a bit
+    df['prob'] = 1-np.exp(-df['f']/12)   # maybe play with the delta constant 
     df = df.sort_values('prob')
     df['cumy'] = df['y'].cumsum() / sum(df['y'])
     df['perc'] = list(range(1,len(df)+1,1))
