@@ -50,7 +50,7 @@ def testmodel(model,x,y,path, save = True):
     loss_value, f_value = model.pred(x,y)      # outsample
     res = pd.DataFrame(data={'f':f_value.reshape(f_value.shape[0]),'y':y})
     res = res.sort_values('y')
-    res['prob'] = 1-np.exp(-res['f']/12)   # maybe play with the delta constant to cheat on AUC a bit
+    res['prob'] = 1-np.exp(-res['f']/12)   # maybe play with the delta constant 
     fpr = dict()
     tpr = dict()
     roc_auc = dict()
